@@ -1,5 +1,5 @@
 # Attendance_system
-# 🎯 Face Attendance System
+## 🎯 Face Attendance System
 
 A simple **face recognition-based attendance system** built with **Python, OpenCV, and face_recognition**.  
 It detects and recognizes faces in real-time using a webcam and logs attendance into a CSV file with date and time.
@@ -15,5 +15,5 @@ It detects and recognizes faces in real-time using a webcam and logs attendance 
 
 ---
 
-## 📂 Project Structure
+
 
