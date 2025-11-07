@@ -7,19 +7,21 @@ from datetime import datetime
 
 video_capture = cv2.VideoCapture(0)
 
-bill_image = face_recognition.load_image_file('code\Bill.png')
+bill_image = face_recognition.load_image_file("/home/ayush/Attendence_program/face attendance system/code/Bill.png")
 bill_encoding = face_recognition.face_encodings(bill_image)[0]
-ayush = face_recognition.load_image_file('code\photo.jpg')
-ayush_encoding = face_recognition.face_encodings(ayush)[0]
-elon_photo=face_recognition.load_image_file('code\elon.jpg')
-elon_encoding=face_recognition.face_encodings(elon_photo)[0]
+
+elon_image = face_recognition.load_image_file("/home/ayush/Attendence_program/face attendance system/code/elon.jpg")
+elon_encoding = face_recognition.face_encodings(elon_image)[0]
+
+photo_image = face_recognition.load_image_file("/home/ayush/Attendence_program/face attendance system/code/photo.jpg")
+photo_encoding = face_recognition.face_encodings(photo_image)[0]
 
 
 
 
 known_face_encoding = [
     bill_encoding,
-    ayush_encoding,  
+    photo_encoding,  
     elon_encoding,
 ]
 
@@ -99,7 +101,7 @@ while True:
     cv2.imshow("Attendance System", frame)
 
     
-    if cv2.waitKey(1) & 0xFF == ord('q'):
+    if cv2.waitKey(10) & 0xFF == ord('q'):
         break
 
 
